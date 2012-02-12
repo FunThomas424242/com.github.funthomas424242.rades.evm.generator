@@ -1,16 +1,21 @@
 [comment encoding = UTF-8 /]
 [module main('http://funthomas424242.github.com/rades/evm')/]
-[import com::github::funthomas424242::rades::evm::generator::templates::layouts::layoutFiles /]
+[import com::github::funthomas424242::rades::evm::generator::templates::project::layoutFiles /]
 [import com::github::funthomas424242::rades::evm::generator::templates::core::queries /]
 [import com::github::funthomas424242::rades::evm::generator::templates::ide::eclipseFiles /] 
 [import com::github::funthomas424242::rades::evm::generator::templates::build::mavenFiles /]
+[import com::github::funthomas424242::rades::evm::generator::templates::build::gradleFiles /]
+[import com::github::funthomas424242::rades::evm::generator::templates::project::gnu /]
 
 [template public main(model : EyeViewModel )]
 [comment @main /]
 
 
-//pom.xml
+// gnu standard files
+[generateGNUFiles(model)/]
+//pom.xml, build.gradle
 [generateMavenFiles(model)/]
+[generateGradleFiles(model)/]
 //.classpath, .project
 [generateEclipseFiles(model)/]
 
