@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[module queries('http://funthomas424242.github.com/rades/evm')]
+
+
+[query public projectName (model : EyeViewModel) : String = 
+    model.groupId+'.'+model.artifactId
+ /]
+
+[query public baseDirectory(model : EyeViewModel) : String =  
+    projectName(model)+'/'
+/]
+
+[query public javaDirectory(model : EyeViewModel) : String = 
+    baseDirectory(model)+'src/main/java/'  
+ /]
+
+[query public resourceDirectory(model : EyeViewModel) : String = 
+    baseDirectory(model)+'src/main/resources/'  
+ /]
+
+[query public layoutDirectory(model : EyeViewModel) : String = 
+    resourceDirectory(model)+'dialogLayouts/'  
+ /]

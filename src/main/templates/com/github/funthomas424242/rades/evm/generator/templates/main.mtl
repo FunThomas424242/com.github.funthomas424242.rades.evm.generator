@@ -1,0 +1,28 @@
+[comment encoding = UTF-8 /]
+[module main('http://funthomas424242.github.com/rades/evm')/]
+[import com::github::funthomas424242::rades::evm::generator::templates::layouts::layoutFiles /]
+[import com::github::funthomas424242::rades::evm::generator::templates::core::queries /]
+[import com::github::funthomas424242::rades::evm::generator::templates::ide::eclipseFiles /] 
+[import com::github::funthomas424242::rades::evm::generator::templates::build::mavenFiles /]
+
+[template public main(model : EyeViewModel )]
+[comment @main /]
+
+
+//pom.xml
+[generateMavenFiles(model)/]
+//.classpath, .project
+[generateEclipseFiles(model)/]
+
+
+
+// generate formular files
+[for (element : ModelElement | model.elements)]
+    [if (element.oclIsTypeOf(Formular))]
+        [let formular : Formular = element.oclAsType(Formular)]
+        	[generateLayoutFiles(model, formular) /]
+        [/let]
+    [/if] 
+[/for]
+
+[/template]

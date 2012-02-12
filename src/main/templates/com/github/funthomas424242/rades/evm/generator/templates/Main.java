@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package com.github.funthomas424242.rades.evm.generator;
+package com.github.funthomas424242.rades.evm.generator.templates;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,7 +35,7 @@ public class Main extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/com/github/funthomas424242/rades/evm/generator/main";
+    public static final String MODULE_FILE_NAME = "/com/github/funthomas424242/rades/evm/generator/templates/main";
     
     /**
      * The name of the templates that are to be generated.

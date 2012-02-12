@@ -25,7 +25,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
 import org.osgi.framework.Bundle;
 
-import com.github.funthomas424242.rades.evm.generator.Main;
+import com.github.funthomas424242.rades.evm.generator.templates.Main;
 
 /**
  * Main entry point of the 'EVM to Java Project' generation module.
