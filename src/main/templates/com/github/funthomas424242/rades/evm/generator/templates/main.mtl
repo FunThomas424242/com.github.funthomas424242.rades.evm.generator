@@ -6,6 +6,8 @@
 [import com::github::funthomas424242::rades::evm::generator::templates::build::mavenFiles /]
 [import com::github::funthomas424242::rades::evm::generator::templates::build::gradleFiles /]
 [import com::github::funthomas424242::rades::evm::generator::templates::project::gnu /]
+[import com::github::funthomas424242::rades::evm::generator::templates::project::onejarFiles /]
+[import com::github::funthomas424242::rades::evm::generator::templates::project::launcherFiles /]
 
 [template public main(model : EyeViewModel )]
 [comment @main /]
@@ -18,6 +20,10 @@
 [generateGradleFiles(model)/]
 //.classpath, .project
 [generateEclipseFiles(model)/]
+//onejar configuration
+[generateOneJarFiles(model)/]
+// Launcher.java
+[generateLauncherFiles(model)/]
 
 
 
